@@ -5,6 +5,16 @@
 # is restricted to this project.
 use Mix.Config
 
+config :budgie, Budgie.Robot,
+  adapter: Hedwig.Adapters.Console,
+  name: "budgie",
+  aka: "/",
+  responders: [
+    {Hedwig.Responders.Help, []},
+    {Hedwig.Responders.Ping, []}
+  ]
+
+
 # Configures the endpoint
 config :budgie, BudgieWeb.Endpoint,
   url: [host: "localhost"],
