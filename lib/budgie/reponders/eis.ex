@@ -9,7 +9,7 @@ defmodule Budgie.Responders.Eis do
   alias Budgie.Services.Eis.Destroy
   alias Hedwig.Message
 
-  Hedwig.Responder.hear ~r/eis (.*)/, %Message{matches: %{1 => content}, room: room} = msg do
+  hear ~r/eis (.*)/, %Message{matches: %{1 => content}, room: room} = msg do
     # IO.inspect(msg)
     reply(msg, Logger.log(%{username: msg.user, room: room, content: content}))
     # reply(msg, msg.matches[1])
