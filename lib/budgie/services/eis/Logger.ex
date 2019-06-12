@@ -1,5 +1,7 @@
 defmodule Budgie.Services.Eis.Logger do
+  alias Budgie.Services.Stemmer
+
   def log(value) do
-    value.content
+    Stemmer.stem(value.content)
   end
 end
