@@ -8,4 +8,12 @@ defmodule Budgie.Keyword do
 
     timestamps()
   end
+
+  def changeset(%Keyword{} = res, attrs) do
+    msc
+    |> cast(attrs, [
+      :key,
+      :related_keys
+    ])
+  end
 end
