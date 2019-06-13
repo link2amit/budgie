@@ -19,7 +19,7 @@ defmodule Budgie.Mixfile do
   def application do
     [
       mod: {Budgie.Application, []},
-      extra_applications: [:logger, :runtime_tools, :hedwig]
+      extra_applications: [:logger, :runtime_tools, :hedwig, :postgrex, :ecto]
     ]
   end
 
@@ -39,7 +39,9 @@ defmodule Budgie.Mixfile do
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
       {:plug_cowboy, "~> 1.0"},
-      {:hedwig, "~> 1.0"}
+      {:hedwig, "~> 1.0"},
+      {:postgrex, ">= 0.0.0"},
+      {:ecto, "~> 1.0"}
     ]
   end
 end

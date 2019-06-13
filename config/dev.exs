@@ -40,6 +40,15 @@ config :budgie, BudgieWeb.Endpoint,
     ]
   ]
 
+config :budgie, Budgie.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  database: "budgie",
+  username: "postgres",
+  password: "postgres",
+  hostname: "localhost",
+  priv: "priv/repo",
+  timeout: 30_000
+
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"
 
