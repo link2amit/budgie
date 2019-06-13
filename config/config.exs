@@ -15,6 +15,12 @@ config :budgie, Budgie.Robot,
     {Budgie.Responders.Eis, []}
   ]
 
+config :budgie, Budgie.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  database: "budgie",
+  username: "postgres",
+  password: "postgres"
+
 # Configures the endpoint
 config :budgie, BudgieWeb.Endpoint,
   url: [host: "localhost"],
