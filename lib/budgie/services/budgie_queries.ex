@@ -2,7 +2,7 @@ defmodule Budgie.Services.BudgieQueries do
   alias Budgie.Repo
   alias Ecto.Multi
   import Ecto.Query
-  alias Budgie.Schema.{Response, Keyword}
+  alias Budgie.Services.Schema.{Response, Keyword}
 
   @doc """
     creates keyword
